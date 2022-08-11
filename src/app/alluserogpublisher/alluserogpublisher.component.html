@@ -1,0 +1,61 @@
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color="#ffffff" type = "ball-scale-multiple" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
+<div class="heading text-center">
+  <h1 class="pt-4">Publish User History</h1>
+</div>
+<div class="container ride-history">
+  <div class="row" *ngFor="let u of bookRides">
+    <div class="col-md-6" *ngFor="let user of u">
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-4 img">
+            <div class="card-img">
+            <img
+              class="img-fluid rounded-start"
+                *ngIf="!getLength(user.image.length)"
+                src="https://i.imgur.com/CFpa3nK.jpg"
+                alt="profile"
+            />
+           <img
+              class="img-fluid rounded-start"
+                *ngIf="getLength(user.image.length)"
+                [src]="user.image"
+                alt="profile" />
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <div class="card-content">
+                <div class="ride-data" id="name">
+                  <h2 class="title">Name :</h2>
+                  <span>{{ user.name }}</span>
+                </div>
+                <div class="ride-data" id="mobile">
+                  <h2 class="title">Mobile :</h2>
+                  <span>{{ user.mobile }}</span>
+                </div>
+                <div class="ride-data" id="email">
+                  <h2 class="title">Email:</h2>
+                  <span>{{ user.email }}</span>
+                </div>
+              </div>
+              <div class="feedback">
+                <div class="form-group">
+                  <textarea
+                    id="feedback-text"
+                    cols="2"
+                    #comment
+                    rows="2"
+                    class="form-control"
+                    placeholder="Feedback"
+                  ></textarea>
+                  <a (click)="addComment(user._id,comment.value)" style="cursor: pointer;"class="feedback-btn">Submit</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

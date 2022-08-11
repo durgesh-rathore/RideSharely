@@ -1,0 +1,379 @@
+.banner{
+
+  background:linear-gradient(to right, rgba(0, 0, 0.8, 0.8),rgba(0, 0, 0.8, 0.8) ) ,url("https://media.istockphoto.com/photos/car-on-asphalt-road-in-summer-picture-id1189557488?k=20&m=1189557488&s=612x612&w=0&h=mr3oTUwQ6pdJUE5r9Z01YbHVYesrSZ1Q_ooV_m0Cem0=") center top no-repeat ;
+  /* background: linear-gradient(to right, rgba(0, 0, 78, 0.5),rgba(0, 0, 0.8, 0.9) ), url("https://cdn-ds.com/blogs-media/sites/369/2018/03/18114555/two-lanes-of-cars-backed-up-in-traffic-with-brake-lights_b.jpg") center top no-repeat; */
+ background-repeat: no-repeat;
+ background-size: cover;
+    /* background-size:1550px 600px; */
+    position: relative;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 65vh;
+    background-position: center center;
+}
+
+section h5{
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+section .card{
+  box-shadow: var(--box-shadow);
+}
+
+section .card-title{
+  font-size: 14px;
+  bottom: 0px;
+}
+
+section .card .size{
+  text-align: center;
+  font-size: 14px;
+}
+section .card-link{
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  font-size: 14px;
+}
+.btn{
+  text-align: center;
+}
+
+.search-form{
+  padding: 20px 0;
+}
+.search-form .search-bar{
+  padding: 0;
+}
+.search-form .form-group{
+  width: 100%;
+}
+
+.search-form .form-group #from{
+  border-radius: 30px 0 0 30px;
+  box-shadow: 2px 1px 5px black;
+
+}
+
+.search-form .form-group .add{
+  box-shadow: 2px 1px 5px black;
+  padding: 13px 0;
+}
+
+.search-form .form-group #search-btn{
+  border-radius: 0 30px 30px 0;
+  background-color: #1B2A49;
+  color: white;
+  /* box-shadow: 2px 1px 5px black; */
+}
+.search-form .search-bar .search-box{
+  border-radius: 0;
+  box-shadow: 2px 1px 5px black;
+}
+.search-form .form-group .form-control{
+  padding: 10px 30px;
+}
+.search-form{
+  display: flex;
+}
+.search-form .button-search{
+  width: fit-content;
+}
+.ride-heading{
+  margin:50px;
+  text-align: center;
+}
+@media  screen and (max-width:576px){
+  .search-form{
+    flex-direction: column;
+    padding: 0 25px;
+    margin: 40px 0;
+  }
+  .search-form .form-group{
+    margin: 10px 0;
+  }
+  .search-form .form-group #from, .search-form .form-group #search-btn{
+    border-radius: 0;
+  }
+  .Center{
+    text-align: center;
+ }
+
+}
+.help{
+  text-align: center;
+  padding: 70px;
+  font-size: 36px;
+  font-weight: 600;
+  font-family: ovileo;
+  margin-bottom: 20px;
+}
+
+.text-center2 img{
+height: 150%;
+padding-bottom: 150px;
+background-size: cover;
+ }
+
+ #sub-hero {
+  background-color: var(--secondary);
+  margin: 80px 0;
+  box-shadow: 0 5px 18px rgba(151, 151, 151, 0.5);
+}
+
+#sub-banner {
+  padding: 2em;
+}
+
+#subhero-text {
+  padding: 50px 30px;
+  margin: auto;
+}
+
+#subhero-text h3 {
+  font-size: 2em;
+}
+
+.heading1{
+   font-weight: 600;
+   font-size: 38px;
+   font-family: ovileo;
+}
+.box {
+  background: #fff;
+  padding: 30px;
+  margin: 0 0 24px 0;
+  box-shadow: 0 0 8px rgba(40, 40, 40, 0.2);
+}
+
+.rte .boxHeadline {
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin: 0 0 25px 0;
+}
+/*  */
+.rte .boxHeadline+.boxHeadlineSub {
+  margin: -18px 0 30px 0;
+}
+
+.rte .boxHeadlineSub {
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-style: italic;
+  color: #919599;
+  margin: 0 0 25px 0;
+}
+
+.section-title {
+  text-align: center;
+  /* padding-bottom: 30px; */
+}
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  /* margin-bottom: 20px; */
+  padding-bottom: 20px;
+  position: relative;
+  color: #2d405f;
+}
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #aabbd7;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+.section-title p {
+  margin-bottom: 0;
+
+}
+.section-title h4{
+  font-size:20px;
+  padding:0 60px;
+}
+
+
+
+/* ----------------********--------------- */
+body{
+  margin-top:20px;
+color: #6c7293;
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid #e7eaed;
+  border-radius: 0;
+}
+
+.card {
+  margin-bottom: .75rem;
+  box-shadow: 0px 1px 15px 1px rgba(230, 234, 236, 0.35);
+  /* border-radius: 45px; */
+}
+.accordion .card .card-header {
+  background-color: transparent;
+  border: none;
+  padding: 2rem;
+}
+.grid-margin {
+  margin-bottom: 0.625rem;
+}
+.accordion .card .card-header a[aria-expanded="true"]:before {
+  content: "\F374";
+}
+.accordion .card .card-header a:before {
+  font-family: "Material Design Icons";
+  position: absolute;
+  right: 7px;
+  top: 0;
+  font-size: 18px;
+  display: block;
+}
+.accordion .card .card-header a[aria-expanded="false"]:before {
+  content: "\F415";
+}
+
+.ride:hover{
+  box-shadow: 0 0 6px #1B2A49;
+}
+.card-horizontal {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+.side-content{
+   text-align: justify;
+   color: #1B2A49
+}
+.heading2{
+  font-size: 20px;
+  color: black;
+}
+.para{
+  font-size: 16px;
+  text-align: justify;
+}
+
+
+
+@keyframes shine {
+  from {
+      background-position: center 0;
+  }
+  to {
+      background-position: center 800%;
+  }
+}
+
+.text h1 {
+  margin: 60;
+  font-size: 80px;
+  font-weight: 900;
+  letter-spacing: 5px;
+  color: white;
+  background: linear-gradient( rgba(252, 253, 255, 0.908), rgba(253, 214, 123, 0.941), rgb(225, 247, 255), rgba(255, 231, 93, 0.941));
+  background-size: auto 180%;
+  -webkit-text-fill-color: transparent;
+  animation: shine 8s linear infinite;
+}
+
+.text {
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.text h1 {
+  text-shadow: 8px 8px 8px rgba(255, 255, 255, 0);
+}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: #f7f8fc;
+  font-family: "Roboto", sans-serif;
+  color: #10182f;
+}
+.main {
+  display: flex;
+  /*width: 1040px;
+  */justify-content: space-evenly;
+  flex-wrap: wrap;
+  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+}
+
+.product {
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 300px;
+}
+.card-header img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.card-title1{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.card-body1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  min-height: 220px;
+}
+
+.tag {
+  background: #cccccc;
+  border-radius: 50px;
+  font-size: 12px;
+  margin:auto;
+  color: #fff;
+  padding: 5px 19px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+}
+.tag-teal {
+  background-color: #1b2a49;
+}
+
+.dropdown select{
+  width: 100%;
+  padding: 10px 30px;
+}

@@ -1,0 +1,206 @@
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color="#ffffff" type = "ball-scale-multiple" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
+<h1 class="text-center mt-5">Ride Details</h1>
+
+<div class="container ride-history mt-5">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-3 img">
+            <div class="card-img">
+              <div class="detail mb-3">
+               <a (click)="navigateToDetail(publish.publisherId._id)" style="cursor: pointer;" *ngIf="!getLength()"
+               type="button" id="userProfile" aria-expanded="false"><i class="fa fa-user-circle"></i></a>
+
+             <a (click)="navigateToDetail(publish.publisherId._id)" style="cursor: pointer;" *ngIf="getLength()"><img
+              class="img-fluid"
+                 [src]="publish.publisherId.image" id="userProfile"/></a>
+              </div>
+              <div class="texts text-center">
+                <a style="cursor: pointer;color: #1b2a49;" class="name">{{publish.publisherId.name}}</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-body">
+              <div class="card-content">
+                <div class="ride-data" id="name">
+                  <h2 class="title">From :</h2>
+                  <span>{{publish.fromId.place}}</span>
+                </div>
+                <div class="ride-data" id="mobile">
+                  <h2 class="title">To :</h2>
+                  <span>{{publish.toId.place}}</span>
+                </div>
+                <div class="ride-data" id="email">
+                  <h2 class="title">Date :</h2>
+                  <span>{{publish.rideDate | date:'dd/MM/yyyy'}}</span>
+                </div>
+                <div class="ride-data" id="email">
+                  <h2 class="title">Time :</h2>
+                  <span>{{publish.rideDate | date:'shortTime'}}</span>
+                </div>
+                <div class="ride-data" id="email">
+                  <h2 class="title">Seat Available :</h2>
+                  <span>{{publish.seatAvailable}} </span>
+                </div>
+                <div class="ride-data" id="name">
+                  <h2 class="title">Price for 1 person :</h2>
+                  <span>{{publish.amountPerPerson | number:"0.0-0"}} Rs</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-body">
+              <div class="card-content">
+
+                <div class="ride-data" id="mobile">
+                  <h2 class="title">Distance :</h2>
+                  <span>{{publish.distance | number }} km</span>
+                </div>
+                <div class="ride-data" id="email">
+                  <h2 class="title">Expected Time :</h2>
+                  <span>{{getTime(publish.distance)}}{{time.hour| number:"0.0-0"}} hour : {{time.minute | number:"0.0-0"}}
+                    minute</span>
+                </div>
+                <div class="ride-data" id="email">
+                  <h2 class="title">Seat Want :</h2>
+                  <span><input type="number" min="1" max="{{publish.seatAvailable}}"
+                    [(ngModel)]="seat" value="seat"></span>
+                </div>
+              </div>
+              <div class="ride-data" id="email">
+                <h2 class="title">Message :</h2>
+                <textarea disabled id="feedback-text" cols="2" class="form-control">{{publish.msgForBooker}}</textarea>
+                <a (click)="bookRide()" style="cursor :pointer;" class="btn signup">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- <div class="container ">
+  <div class="form-box">
+    <div action="#" class="form mt-5">
+      <div class="product-content">
+        <div class="detail" style="margin-left: 150px;">
+          <a (click)="navigateToDetail(publish.publisherId._id)" style="cursor: pointer;" *ngIf="!getLength()"
+            type="button" id="userProfile" aria-expanded="false"><i class="fa fa-user-circle"></i></a>
+
+          <a (click)="navigateToDetail(publish.publisherId._id)" style="cursor: pointer;" *ngIf="getLength()"><img
+              [src]="publish.publisherId.image" id="userProfile" height="100" width="100" /></a>
+
+          <a (click)="navigateToDetail(publish.publisherId._id)" style="cursor: pointer;text-decoration: underline;"
+            class="name">{{publish.publisherId.name}}</a>
+
+        </div>
+        <div class="from mb-3">
+          <i class="fst-normal" style="color:rgb(255, 255, 255); font-weight:bold;">From : </i>
+          <label style="padding-left:10px;">{{publish.fromId.place}}</label>
+        </div>
+        <div class="from mb-3">
+          <i class="fst-normal" style="color:rgb(255, 255, 255); font-weight:bold; ">To : </i>
+          <label style="padding-left:10px; margin-left: 25px;">{{publish.toId.place}}</label>
+        </div>
+        <div class="from mb-3">
+          <i class="fst-normal" style="color:rgb(255, 255, 255); font-weight:bold; ">Date : </i>
+          <label>{{publish.rideDate | date:'dd/MM/yyyy'}}</label>
+        </div>
+        <div class="from mb-3">
+          <i class="fst-normal" style="color:rgb(255, 255, 255); font-weight:bold; ">Time : </i>
+          <label>{{publish.rideDate | date:'shortTime'}}</label>
+        </div>
+        <div class="from mb-3">
+          <i class="fst-normal" style="color:rgb(255, 255, 255); font-weight:bold; ">Price for 1 Person : </i>
+          <label>{{publish.amountPerPerson | number:"0.0-0"}} Rs</label>
+        </div>
+        <div class="from mb-3">
+          <i class="fst-normal" style="color:rgb(255, 255, 255);font-weight:bold; ">Distance : </i>
+          <label>{{publish.distance | number }} km</label>
+        </div>
+
+        <div class="from mb-3">
+          <i class="fst-normal" style="color:rgb(255, 255, 255);  font-weight:bold; ">Expected Time : </i>
+          <label>{{getTime(publish.distance)}}{{time.hour| number:"0.0-0"}} hour : {{time.minute | number:"0.0-0"}}
+            minute</label>
+        </div>
+        <div class="from m-3">
+          <label>Seat Available : {{publish.seatAvailable}} </label>
+        </div>
+
+        <div class="from m-3">
+          <label style="color:white">Seat Want : </label><input type="number" min="1" max="{{publish.seatAvailable}}"
+            [(ngModel)]="seat" value="seat">
+        </div>
+
+        <h2 class="m-3" style="color:rgb(255, 255, 255);">Message :</h2>
+        <div class=" card m-3">
+          <textarea disabled style="padding-left:10px;">{{publish.msgForBooker}}</textarea>
+        </div>
+        <div class="form-group">
+          <a style="cursor:pointer; margin-left:90px" (click)="bookRide()" class="btn signup">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<section class="services">
+  <div class="container">
+    <div class="section-title">
+      <h2>Thoughts of Publishers</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-6 d-flex align-items-stretch" data-aos="fade-up">
+        <div class="icon-box icon-box-pink">
+          <div class="icon"><i class="fas fa-user"></i></div>
+          <h4 class="title"><a href="">Shubham Burghate</a></h4>
+          <p class="description">Riding bike is an best feeling and if you are in depression or feeling lonely then take
+            your bike pull the throttle and go for ride. </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+        <div class="icon-box icon-box-green">
+          <div class="icon"><i class="fas fa-user"></i></div>
+          <h4 class="title"><a href="">Mohit Rajput</a></h4>
+          <p class="description">Life is short, break the rules, forgive quickly, love honestly, laugh easy, keep it
+            simple, ride often, ride free and never regret anything that makes you smile.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section><!-- End Services Section -->
+
+<section class="features">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Book Your Rides</h2>
+      <h1>In RideSharely app You can Book your Rides in Just a Minute.</h1>
+    </div>
+
+    <div class="row" data-aos="fade-up">
+      <div class="col-md-5">
+        <img src="../../assets/Images/form2.png" class="img-fluid" alt="">
+      </div>
+      <div class="col-md-7 mt-5 pt-4">
+        <h1>Create a Ridesharely Account</h1>
+        <p class="fst-normal">
+          Add your profile picture, a few words about you and your phone number to increase trust between members.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+

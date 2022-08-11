@@ -1,0 +1,34 @@
+.navbar{
+  background: #1b2a49;
+}
+.navbar .navbar-brand{
+  letter-spacing:1px;
+}
+.navbar .navbar-nav .nav-item .nav-link{
+  letter-spacing:1px;
+  color:#fff;
+  font-size: 16px;
+  transition: all 0.3s ease-out;
+}
+.navbar .navbar-nav .nav-item .nav-link:hover{
+  color:rgb(136, 207, 255);
+}
+.navbar .navbar-nav .nav-item{
+  margin: 0 5px;
+}
+
+.collapse .dropdown .username{
+  margin-right:25px;
+  text-decoration: none;
+  color:#fff;
+  letter-spacing:1px
+}
+.collapse .dropdown #userProfile i{
+  font-size:24px;
+  color:#fff;
+  vertical-align: middle;
+}
+
+.collapse .right-nav .nav-item{
+  margin-right:20px;
+}
